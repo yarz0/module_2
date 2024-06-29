@@ -1,5 +1,8 @@
-n = int(input("Введите число n от 3 до 20: "))
-for i in range(1, 21):                          # Цикл для каждого числа от 1 до 20
-    for j in range(1, i):                       # Цикл для каждого числа от 1 до текущего числа
-        if i + j == n:                          # Проверка суммы чисел
-            print(f"result: {i}, {j}")
+n = int(input("Введите число n от 3 до 20:"))
+pass_ = []
+for i in range(1, 21):
+    for j in range((i + 1), 21):
+        if i + j == n or n % (i + j) == 0:
+            pass_.append(f"{i}{j}")
+a = ''.join(pass_)
+print(str(a))
